@@ -1,8 +1,9 @@
 const diff = (object1, object2) => { 
 const result = {};
   for (const name of Object.keys(object1)) {
-    if (object1[name] ! == object2[name]) {
-result[name] = object1[name];}
+const value = object1[name];
+    if (object1[name] ! == value) {
+result[name] = value;}
   }
   return result;
 };
