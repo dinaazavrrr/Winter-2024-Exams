@@ -1,13 +1,8 @@
-const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const inputDay = 'Wednesday';
+const index = parseDay(inputDay.toLowerCase());
 
-parseDay= (s) => {
-const result=parseDay('Mon');
-  
-  for (let i = 0; i < day.length; i++) {
-    if (s.startsWith(day[i].toLowerCase())) {
-      return i + 1;
-    }
-  }
-  return -1;
-console.log(result);
-};
+if (index !== -1) {
+  console.log(${inputDay} is day number ${index} of the week.);
+} else {
+  console.log(${inputDay} is not a valid day.);
+}
