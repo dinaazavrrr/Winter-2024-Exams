@@ -1,6 +1,4 @@
-// Return an array without duplicates
-
-DISTINCT = (data) => {
+const distinct= (data) => {
   A = new Set();
   w = 0;
   data.forEach((a) => {
