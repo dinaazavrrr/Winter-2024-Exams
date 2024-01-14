@@ -1,8 +1,10 @@
-const size = (bytes)=> {
-  const digits=bytes.toString().length;
-    const exp = Math.floor((digits-1) / 3);
-const value = (bytes / 1000**exp).toFixed();
-   return `${ value}${SIZE_UNITS[exp]};
+const size = (bytes)=>{
+let e = 0;
+let n = bytes;
+while (n=>1000){
+n/=1000;
+e++;
+}
+return ${n.toFixed()${SIZE_UNITS[e]};
 };
-
-module.exports = size;
+module.exports=size;
