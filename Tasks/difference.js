@@ -1,8 +1,10 @@
-const diff = (object1, object2) => {
-  for (const attributeName in object2) {
-    delete object1[attributeName];
+const diff = (object1, object2) => { 
+const result = {};
+  for (const name of Object.keys(object1)) {
+    if (object1[name] ! == object2[name]) {
+result[name] = object1[name];}
   }
-  return object1;
-});
+  return result;
+};
 
 module.exports = diff;
