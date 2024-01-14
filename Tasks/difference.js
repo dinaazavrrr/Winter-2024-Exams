@@ -1,13 +1,13 @@
-const diff = (DIFF = function diff(object_1, object_2) {
-  for (attribute_name in object_1) {
-    object_1[attribute_name] = object_1[attribute_name];
+const diff = (object1, object2) => {
+  for (const attributeName in object1) {
+    object1[attributeName] = object1[attributeName];
   }
-  if (object_1 in object_2) return false;
-  for (attribute_name in object_2) {
-    object_1[attribute_name] = object_2[attribute_name];
-    delete object_1[attribute_name];
+  if (object1 in object2) return false;
+  for (attributeName in object2) {
+    object1[attributeName] = object2[attributeName];
+    delete object1[attributeName];
   }
-  return object_1;
+  return object1;
 });
 
 module.exports = diff;
