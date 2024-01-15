@@ -5,10 +5,10 @@ const getMonthNumber = (input) => {
     'jan', 'feb', 'mar', 'apr', 'may', 'jun',
     'jul', 'aug', 'sep', 'oct', 'nov', 'dec'
 ];
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+ const lowerInput = input.toLowerCase();
+  const index = months.findIndex(month => lowerInput.startsWith(month));
   }
  return index !== -1 ? index + 1 : -1;
 };
 
-module.exports = Month;
+module.exports =getMonthNumber;
