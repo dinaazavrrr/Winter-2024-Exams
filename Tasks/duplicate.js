@@ -1,6 +1,6 @@
 // Return an array without duplicates
 
-сconst duplicate = (value, N) => {
+const duplicate = (value, N) => N <= 0 ? [] : Array(N).fill(value); {
   if (N <= 0) {return [];}
   else {
     let res = [];
