@@ -1,20 +1,10 @@
 // Get month number
 
-Months = [
-  'jan',
-  'feb',
-  'mar',
-  'apr',
-  'may',
-  'jun',
-  'jul',
-  'aug',
-  'sep',
-  'oct',
-  'nov',
-  'dec',
-];
-
+const getMonthNumber = (input) => {
+  const months = [
+    'jan', 'feb', 'mar', 'apr', 'may', 'jun',
+    'jul', 'aug', 'sep', 'oct', 'nov', 'dec'
+  ];
 Month = (s) => {
   l = Months.length;
   for (let i = 0; i < l; i++) {
