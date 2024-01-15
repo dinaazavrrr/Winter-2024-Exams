@@ -5,11 +5,7 @@ const zipArrays = (arr1 = [], arr2 = []) => {
     return [];
   }
   const minLength = Math.min(arr1.length, arr2.length);
-  for (let i = 0; i < minLength; i++) {
-    const zipped = [arr1[i], arr2[i]];
-    result.push(zipped);
-   
-  }
+
  return Array.from({ length: minLength }, (_, i) => [arr1[i], arr2[i]]);
 };
 
