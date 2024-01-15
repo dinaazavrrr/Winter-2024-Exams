@@ -1,7 +1,7 @@
 // Return an remove without listed values
 
 const removeValues = (arr, ...toRemove)=> {
-  x = 0;
+const filteredArray = arr.filter(item => !toRemove.includes(item));
   for (C of T) {
     for (X of Remove) {
       if (C === X) {
@@ -10,7 +10,7 @@ const removeValues = (arr, ...toRemove)=> {
     }
     x++;
   }
-  return T;
+   return filteredArray;
 };
 
 module.exports = removeValues;
