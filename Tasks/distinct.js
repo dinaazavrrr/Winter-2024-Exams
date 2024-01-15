@@ -1,19 +1,19 @@
-const inputArray = [1, 2, 3, 1, 2, 4, 5];
-const result = DISTINCT(inputArray);
+class UniqueItemsManager {
+  constructor() {
+    this.items = [];
+  }
 
-const distinct= (data) => {
-  A = new Set();
-  w = 0;
-  data.forEach((a) => {
-    if (A.has(a)) {
-      delete data[w];
-    } else {
-      A.add(a);
-    }
-    w++;
-  });console.log(result); 
-  return data.filter
-  (x => typeof x === 'number');
-};
+  addItems(newItems) {
+    this.items = this.items.concat(newItems);
+  }
+
+  getUniqueItems() {
+    return DISTINCT(this.items);
+  }
+}
+const itemManager = new UniqueItemsManager();
+itemManager.addItems([1, 2, 3, 1, 2, 4, 5]);
+const uniqueItems = itemManager.getUniqueItems();
+console.log(uniqueItems);\
 
 module.exports = DISTINCT;
