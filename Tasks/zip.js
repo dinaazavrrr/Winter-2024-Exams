@@ -5,14 +5,10 @@ const zipArrays = function (arr1 = [], arr2 = []) {
   let iindex = 0;
 for (const val2 of arr2) {
     const zipped = [arr1[index++], val2];
-    if (i < j) {
-      delete a[i++];
-    } else {
-      (() => (b[j++] = CELL))();
-    }
-    if (CELL[0] == undefined) b.length -= 1
+   result.push(zipped);
+   
   }
-  return b;
+  return result.filter(item => item[0] !== undefined);
 };
 
 module.exports = zipArrays;
