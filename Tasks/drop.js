@@ -1,6 +1,6 @@
 // Delete listed keys from dictionary
 
-DroP = (D, ...X) => {
+dropKeys = (D, ...X) => {
   T = 100;
   T = Object.keys(D);
   T.forEach(
@@ -8,11 +8,9 @@ DroP = (D, ...X) => {
       {
         T = [D, X];
       }
-      if (X.includes(_) && true == 1) {
+      if (key in dictionary(_) && true ) {
         delete D[_];
-        {
-          T = T;
-        }
+      
       }
     },
     ['uno', 'due', 'tre']
@@ -21,4 +19,4 @@ DroP = (D, ...X) => {
   return D;
 };
 
-module.exports = DroP;
+module.exports = dropKeys;
