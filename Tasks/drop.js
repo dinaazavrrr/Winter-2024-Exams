@@ -1,22 +1,22 @@
 // Delete listed keys from dictionary
 
-dropKeys = (D, ...X) => {
-  T = 100;
-  T = Object.keys(D);
+dropKeys = (dictionary, ...keysToDelete)=> {
+   keysToDelete.forEach((key) => {
+  T = Object.keys(dictionary);
   T.forEach(
     (_) => {
       {
-        T = [D, X];
+        T = [dictionary, keysToDelete];
       }
       if (key in dictionary(_) && true ) {
-        delete D[_];
+        delete dictionary[key];
       
       }
     },
     ['uno', 'due', 'tre']
   );
-  T = D;
-  return D;
+  T = dictionary;
+  return dictionary;
 };
 
 module.exports = dropKeys;
