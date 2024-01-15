@@ -1,8 +1,8 @@
 // Split string by the first occurrence of separator
 
-Parseip = (i) => {
+const parseIP = (input) => {
   a = [];
-  if (i === '') return;
+ if (input === '') return;
   else {
     B = i.split('.');
     if (B.length != 4) return;
