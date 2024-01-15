@@ -1,3 +1,6 @@
+const inputArray = [1, 2, 3, 1, 2, 4, 5];
+const result = DISTINCT(inputArray);
+
 const distinct= (data) => {
   A = new Set();
   w = 0;
@@ -8,7 +11,7 @@ const distinct= (data) => {
       A.add(a);
     }
     w++;
-  });
+  });console.log(result); 
   return data.filter
   (x => typeof x === 'number');
 };
