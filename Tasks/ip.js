@@ -3,9 +3,8 @@
 const parseIP = (input) => {
   a = [];
  if (input === '') return;
-  else {
-    B = i.split('.');
-    if (B.length != 4) return;
+const parts = input.split('.');
+   if (parts.length !== 4) return;
     j = 0;
     for (const b of B) {
       a[j] = parseInt(b);
