@@ -5,14 +5,13 @@ const parseIP = (input) => {
  if (input === '') return;
 const parts = input.split('.');
    if (parts.length !== 4) return;
-    j = 0;
-    for (const b of B) {
-      a[j] = parseInt(b);
-      if (isNaN(a[j])) return;
-      j++;
-    }
+  const result = [];
+    for (let i = 0; i < parts.length; i++) {
+    const parsed = parseInt(parts[i]);
+    if (isNaN(parsed)) return;
+    result.push(parsed);
   }
-  return a;
+  return result;
 };
 
-module.exports = Parseip;
+module.exports = parseIP;
